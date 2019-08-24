@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import json
+from adoptapet.items import Pet
 
 class CatsSpider(scrapy.Spider):
     name = 'cats'
@@ -21,7 +22,18 @@ class CatsSpider(scrapy.Spider):
     def after_search(self, response):
         pattern = r'\bvar\s+init_animals\s*=\s*(\[\{.*?\}\])\s*;\s*\n'
         animal_json_data = response.xpath('/html/body/script[17]/text()').re_first(pattern)
-        animals = json.loads(animal_json_data)
-        scrapy.utils.response.open_in_browser(response)
-        from scrapy.shell import inspect_response
-        inspect_response(response, self)
+        raw_animals = json.loads(animal_json_data)
+
+        animals = []
+        for raw_animal in raw_animals:
+            animals.append(Pet(
+                id=raw_animal['id']
+                adoption_cost=raw_animal['adoptionCost']
+                created_at=raw_animal['created_at']
+                updated_at=raw_animal['updated_at']
+                description=raw_animal['description1']
+                date_of_birth=raw_animal['date_of_birth']
+                is_desexed=raw_animal['isDesexed']
+                sex=raw_animal['sex']))
+
+        return animals
