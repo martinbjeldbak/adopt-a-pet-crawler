@@ -28,7 +28,8 @@ scrapy call cats
 
 ## Deploy
 
-Run the below command after authenticating with Scraping Hub
+Run the below command after authenticating with Scraping Hub using `shub
+login`:
 
 ```sh
 shub deploy
