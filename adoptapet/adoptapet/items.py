@@ -9,11 +9,9 @@ import scrapy
 
 
 class AdoptapetItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
     pass
 
-class Pet(scrapy.Item):
+class Pet(AdoptapetItem):
     id = scrapy.Field()
     sex = scrapy.Field()
     is_desexed = scrapy.Field()
