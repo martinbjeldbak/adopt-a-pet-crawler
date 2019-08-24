@@ -11,6 +11,7 @@ msgpack = "*"
 [packages]
 scrapy = "*"
 pymongo = "*"
+dnspython = "*"
 
 [requires]
 python_version = "3.7"
