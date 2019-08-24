@@ -13,6 +13,7 @@ class AdoptapetItem(scrapy.Item):
 
 class Pet(AdoptapetItem):
     id = scrapy.Field()
+    api_id = scrapy.Field()
     sex = scrapy.Field()
     is_desexed = scrapy.Field()
     created_at = scrapy.Field()
