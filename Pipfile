@@ -7,8 +7,6 @@ verify_ssl = true
 pylint = "*"
 
 [packages]
-beautifulsoup4 = "*"
-lxml = "*"
 scrapy = "*"
 
 [requires]
