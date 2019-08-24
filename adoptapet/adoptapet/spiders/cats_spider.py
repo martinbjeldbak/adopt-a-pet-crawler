@@ -36,6 +36,18 @@ class CatsSpider(scrapy.Spider):
                 description=raw_animal['description1'],
                 date_of_birth=raw_animal['date_of_birth'],
                 is_desexed=raw_animal['isDesexed'],
-                sex=raw_animal['sex']))
+                sex=raw_animal['sex'],
+                readable_age=raw_animal['readable_age'],
+                name=raw_animal['name'],
+                had_behavior_evaluated=raw_animal['hadBehaviourEvaluated'],
+                had_health_checked=raw_animal['hadHealthChecked'],
+                is_vaccinated=raw_animal['isVaccinated'],
+                is_wormed=raw_animal['isWormed'],
+                is_special_needs_okay=raw_animal['isSpecialNeedsOkay'],
+                is_long_term_resident=raw_animal['isLongtermResident'],
+                is_senior_pet=raw_animal['isSeniorPet'],
+                is_microchipped=raw_animal['isMicrochipped'],
+                is_active=raw_animal['isActive']
+            ))
 
         return animals
