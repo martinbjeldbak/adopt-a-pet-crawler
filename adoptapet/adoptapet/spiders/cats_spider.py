@@ -27,13 +27,13 @@ class CatsSpider(scrapy.Spider):
         animals = []
         for raw_animal in raw_animals:
             animals.append(Pet(
-                id=raw_animal['id']
-                adoption_cost=raw_animal['adoptionCost']
-                created_at=raw_animal['created_at']
-                updated_at=raw_animal['updated_at']
-                description=raw_animal['description1']
-                date_of_birth=raw_animal['date_of_birth']
-                is_desexed=raw_animal['isDesexed']
+                id=raw_animal['id'],
+                adoption_cost=raw_animal['adoptionCost'],
+                created_at=raw_animal['created_at'],
+                updated_at=raw_animal['updated_at'],
+                description=raw_animal['description1'],
+                date_of_birth=raw_animal['date_of_birth'],
+                is_desexed=raw_animal['isDesexed'],
                 sex=raw_animal['sex']))
 
         return animals

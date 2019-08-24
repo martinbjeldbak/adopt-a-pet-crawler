@@ -14,10 +14,10 @@ class AdoptapetItem(scrapy.Item):
     pass
 
 class Pet(scrapy.Item):
+    id = scrapy.Field()
     sex = scrapy.Field()
     is_desexed = scrapy.Field()
     created_at = scrapy.Field()
-    updated_at = scrapy.Field()
     updated_at = scrapy.Field()
     date_of_birth = scrapy.Field()
     description = scrapy.Field()
