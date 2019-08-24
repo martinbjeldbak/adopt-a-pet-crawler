@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 beautifulsoup4 = "*"
 lxml = "*"
+scrapy = "*"
 
 [requires]
 python_version = "3.7"
